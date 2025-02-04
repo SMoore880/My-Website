@@ -13,6 +13,10 @@ h1 {
     padding: 1.25rem;
 }
 
+main > h1 {
+    border-bottom: 0.125rem solid #2C3E50;
+}
+
 main {
     width: 80%;
     margin: auto;
@@ -41,6 +45,11 @@ footer {
 }
 
 .highlight {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+p.highlight {
     font-weight: bold;
     color: #e74c3c;
 }
