@@ -36,6 +36,30 @@ a:hover {
     text-decoration: underline;
 }
 
+nav {
+    background-color: #A2C2F2;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li {
+    font-size: 1.1rem;
+}
+
+nav ul li a {
+    color: white;
+}
+
+nav ul li a:hover {
+    color: #6F4F1D;
+}
+
 footer {
     text-align: center;
     padding: 0.625rem;
@@ -56,8 +80,40 @@ p.highlight {
 
 p {
     line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-top: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+main > p {
+    margin-bottom: 1rem;
+}
+
+p {
+    border-left: 4px solid #A2C2F2;
+    padding-left: 1rem;
+}
+
+footer {
+    background: linear-gradient(to right, #A2C2F2, #6F4F1D);
+    color: white;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.column {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
 }
