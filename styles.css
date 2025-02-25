@@ -6,19 +6,26 @@ body {
   color: #2C3E50;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
 }
 
-/* Navigation Menu Styles */
+/* Navigation Menu Styles - Using Flexbox */
 nav {
   background-color: #A2C2F2;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
+  /* Ensures links don't break weirdly */
 }
 
 nav ul li {
@@ -35,14 +42,18 @@ nav ul li a:hover {
   color: #6F4F1D;
 }
 
-/* Main Content Styles */
+/* Main Content Styles - Flexbox Layout */
 main {
+  flex: 1;
   width: 80%;
   margin: auto;
   background-color: white;
   padding: 1.25rem;
   border-radius: 0.625rem;
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Scalable Image */
@@ -70,27 +81,138 @@ p {
   padding-left: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Arial, sans-serif;
 }
 
 /* Responsive Media Queries */
 @media (max-width: 768px) {
-  nav ul {
-      flex-direction: column;
-      align-items: center;
+  nav {
+    flex-direction: column;
+    align-items: center;
   }
+
   main {
-      width: 95%;
-      padding: 1rem;
+    width: 95%;
+    padding: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   body {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
   nav ul li {
-      font-size: 1rem;
+    font-size: 1rem;
   }
+}
+
+/* Grid Layout for Main Content */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Two-column layout */
+  gap: 1rem;
+  /* Space between grid items */
+}
+
+/* Adjust grid for larger screens */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    /* Switch to three columns */
+  }
+}
+
+/* Responsive Grid: Single Column on Small Screens */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    /* One column for smaller screens */
+  }
+}
+
+/* Grid Item Styling */
+.grid-item {
+  padding: 1rem;
+  background-color: #F5F5F5;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Container (kept outside the grid) */
+.image-container {
+  text-align: center;
+  /* Center the image */
+  margin: 1.5rem 0;
+  /* Add some spacing */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.book {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.book img {
+  max-width: 350px;
+  /* Ensures all images are uniformly scaled */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5rem 0;
+  border-radius: 0.5
+}
+
+/* --- Implemented Card Layout for Magic Systems on "Understanding Cosmere Magic" Page --- */
+.magic-card {
+  background-color: #F5F5F5;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.magic-card:hover {
+  transform: scale(1.02);
+}
+
+.magic-card h3 {
+  color: #2C3E50;
+}
+
+.magic-card ul {
+  list-style: disc inside;
+  margin: 0.5rem 0;
+}
+
+.magic-card ul li {
+  margin: 0.25rem 0;
 }
