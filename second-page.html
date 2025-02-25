@@ -1,29 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shardic Secrets</title>
+  <title>Where to Start?</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <!-- Navigation Menu -->
+  <!-- Navigation Menu (Flex Container) -->
   <nav>
     <ul>
       <li><a href="index.html">Welcome to the Cosmere</a></li>
-      <li><a href="second-page.html">Shardic Secrets</a></li>
+      <li><a href="second-page.html">Where to Start?</a></li>
       <li><a href="about.html">My Journey Through the Cosmere</a></li>
-      <li><a href="contact.html">Send a Spanreed Message</a></li>
+      <li><a href="magic.html">Understanding Cosmere Magic</a></li>
     </ul>
   </nav>
 
+  <!-- Main Content (Flex Container) -->
+  <!-- Using grid layout for book recommendations to enhance visual appeal -->
   <main>
-    <h1>Shardic Secrets</h1>
-    <p>This page is under construction. More secrets and hidden lore from the Cosmere will be unveiled soon!</p>
+    <h1>Where to Start?</h1>
+    <div class="content-container grid-books">
+      <p>If you're new to the Cosmere, choosing a starting point can be overwhelming. Here are some recommended books
+        along with their covers to help you decide:</p>
+
+      <section class="book">
+        <h2>Mistborn: The Final Empire</h2>
+        <img src="images/mistborn.jpg" alt="Mistborn: The Final Empire book cover">
+        <p>A great entry point for readers who enjoy a mix of heist, rebellion, and a unique metal-based magic system.
+          This novel sets up many mysteries that tie into the broader Cosmere.</p>
+      </section>
+
+      <section class="book">
+        <h2>Elantris</h2>
+        <img src="images/elantris.jpg" alt="Elantris book cover">
+        <p>A standalone novel that introduces a fascinating magic system and a once-great city brought low by tragedy.
+          Perfect if you prefer a self-contained story.</p>
+      </section>
+
+      <section class="book">
+        <h2>The Way of Kings</h2>
+        <img src="images/way-of-kings.jpeg" alt="The Way of Kings book cover">
+        <p>The first book in The Stormlight Archive series, offering an epic narrative with deep characters and
+          expansive worldbuilding for those ready for a longer, immersive journey.</p>
+      </section>
+
+      <!-- Cosmere Reading Order Picture Section Kept large for readability-->
+      <section class="reading-order">
+        <h2>The reading order as recommended by Brandon</h2>
+        <img src="images/cosmere-reading-order.jpeg" alt="Cosmere Reading Order">
+      </section>
+
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; Seth's Classroom website 2025.</p>
   </footer>
 </body>
+
 </html>
