@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 1rem;
   background-color: #B0B0B0;
   color: #2C3E50;
@@ -9,12 +9,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
 }
 
-/* Navigation Menu Styles - Using Flexbox */
+/* Navigation Menu Styles */
 nav {
-  background-color: #A2C2F2;
+  background-color: #4A6FA5; /* Darker blue for better contrast */
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -25,7 +24,6 @@ nav ul {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  /* Ensures links don't break weirdly */
 }
 
 nav ul li {
@@ -42,7 +40,26 @@ nav ul li a:hover {
   color: #6F4F1D;
 }
 
-/* Main Content Styles - Flexbox Layout */
+/* Responsive Navigation */
+@media (max-width: 750px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Main Content */
 main {
   flex: 1;
   width: 80%;
@@ -56,7 +73,7 @@ main {
   align-items: center;
 }
 
-/* Scalable Image */
+/* Images */
 img {
   max-width: 100%;
   height: auto;
@@ -64,7 +81,7 @@ img {
   margin: auto;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
   text-align: center;
   padding: 0.625rem;
@@ -73,7 +90,7 @@ footer {
   margin-top: 1.25rem;
 }
 
-/* Typography & Content */
+/* Typography */
 p {
   line-height: 1.5;
   margin-bottom: 1rem;
@@ -81,25 +98,20 @@ p {
   padding-left: 1rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Arial, sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
 }
 
-/* Responsive Media Queries */
+/* Responsive Layout */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
   main {
     width: 95%;
     padding: 1rem;
+  }
+
+  h1 {
+    text-align: center;
   }
 }
 
@@ -107,43 +119,29 @@ h6 {
   body {
     font-size: 0.9rem;
   }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    font-size: 1rem;
-  }
 }
 
-/* Grid Layout for Main Content */
+/* Grid Layout */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* Two-column layout */
   gap: 1rem;
-  /* Space between grid items */
+  text-align: center;
 }
 
-/* Adjust grid for larger screens */
 @media (min-width: 1024px) {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
-    /* Switch to three columns */
   }
 }
 
-/* Responsive Grid: Single Column on Small Screens */
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr;
-    /* One column for smaller screens */
   }
 }
 
-/* Grid Item Styling */
+/* Grid Items */
 .grid-item {
   padding: 1rem;
   background-color: #F5F5F5;
@@ -152,12 +150,23 @@ h6 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Image Container (kept outside the grid) */
+.grid-item img {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+/* Adjust last image in "Where to Start" */
+.reading-order img {
+  max-width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Image Container */
 .image-container {
   text-align: center;
-  /* Center the image */
   margin: 1.5rem 0;
-  /* Add some spacing */
 }
 
 .image-container img {
@@ -167,30 +176,22 @@ h6 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.content-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  padding: 1rem;
-}
-
+/* Book Section */
 .book {
   margin-bottom: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .book img {
   max-width: 350px;
-  /* Ensures all images are uniformly scaled */
   width: 100%;
   height: auto;
   display: block;
-  margin: 0.5rem 0;
-  border-radius: 0.5
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
 }
 
-/* --- Implemented Card Layout for Magic Systems on "Understanding Cosmere Magic" Page --- */
+/* Magic Card */
 .magic-card {
   background-color: #F5F5F5;
   border: 1px solid #ddd;
@@ -215,4 +216,89 @@ h6 {
 
 .magic-card ul li {
   margin: 0.25rem 0;
+}
+
+/* FontAwesome Icon Styling */
+.fa-solid, .fa-brands {
+  font-size: 1.2rem; /* Adjust icon size */
+  vertical-align: middle; /* Keeps them aligned with text */
+}
+
+/* Shards Table Styling */
+.shards-table {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.shards-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #F5F5F5;
+}
+
+.shards-table th, 
+.shards-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.shards-table th {
+  background-color: #4A6FA5;
+  color: white;
+  font-weight: bold;
+}
+
+/* Spoiler Button */
+.spoiler-button {
+  background-color: #4A6FA5;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.spoiler-button:hover {
+  background-color: #365985;
+}
+
+/* Spoiler Section */
+details {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #F5F5F5;
+}
+
+details summary {
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+details summary::before {
+  content: "▶ ";
+}
+
+details[open] summary::before {
+  content: "▼ ";
+}
+
+/* ✅ Styling for the Shattered Plains Image */
+.shattered-plains {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.shattered-plains img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
