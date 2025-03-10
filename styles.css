@@ -290,7 +290,7 @@ details[open] summary::before {
   content: "▼ ";
 }
 
-/* ✅ Styling for the Shattered Plains Image */
+/* Styling for the Shattered Plains Image */
 .shattered-plains {
   text-align: center;
   margin-top: 2rem;
