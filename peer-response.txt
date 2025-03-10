@@ -1,0 +1,28 @@
+Peer Response: Website Improvements Based on Feedback
+
+Peer Suggestion 1: "I recommend centering the images and descriptions on the 'Where to Start' page for better flow."
+Change Made: I adjusted the CSS to ensure images and descriptions are centered for both desktop and mobile, creating a smoother layout.
+
+Peer Suggestion 2: "The last image (reading order) is much larger than the others, resizing it slightly would help."
+Change Made: I resized the final image on the 'Where to Start' page to make it blend better with the other content and match the overall layout.
+
+Peer Suggestion 3: "The navigation menu should switch to a stacked layout at 750px for better mobile usability."
+Change Made: I updated the CSS with a media query so that at 750px, the navigation bar switches to a stacked format for improved mobile responsiveness.
+
+Peer Suggestion 4: "Make the navigation menu a darker blue for better contrast."
+Change Made: I changed the nav bar background color to a darker blue for better readability and contrast, making it easier to see against the page.
+
+Peer Suggestion 5: "The 'Want to learn more?' section should be moved to the footer."
+Change Made: I moved the 'Want to learn more?' section from the main content to the footer to keep the homepage cleaner and more organized.
+
+Peer Suggestion 6: "There is redundancy between ‘Where Should You Start’ and ‘Where to Start’—consider streamlining."
+Change Made: I refined the homepage introduction to remove redundancy and improve the flow of information, making it clearer for new readers.
+
+Application of Google Font:
+I implemented the “Cinzel” and “Merriweather” fonts and applied them to all headings and body text across all my pages.
+
+FontAwesome icon(s):
+I integrated Icons in several sections, including the meteor icon next to the “Personal Story” heading on the “My Journey” page and the star icon on the “Cosmere Magic” page.
+
+Table:
+The table is located on the “Cosmere Magic” page within the Shards section. I added a spoiler toggle using the details-summary structure to hide the table and only reveal it when the user clicks on the summary text.
