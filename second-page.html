@@ -5,62 +5,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Where to Start?</title>
+
+  <!-- Google Fonts: Merriweather (Body) & Cinzel (Headings) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles & Icons -->
   <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/d329726b52.js" crossorigin="anonymous"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
 <body>
-  <!-- Navigation Menu (Flex Container) -->
+
+  <!-- Navigation Menu -->
   <nav>
     <ul>
-      <li><a href="index.html">Welcome to the Cosmere</a></li>
-      <li><a href="second-page.html">Where to Start?</a></li>
-      <li><a href="about.html">My Journey Through the Cosmere</a></li>
-      <li><a href="magic.html">Understanding Cosmere Magic</a></li>
+      <li><a href="index.html">Cosmere</a></li>
+      <li><a href="second-page.html">Beginner’s Guide</a></li>
+      <li><a href="about.html">My Journey</a></li>
+      <li><a href="magic.html">Cosmere Magic</a></li>
     </ul>
   </nav>
 
-  <!-- Main Content (Flex Container) -->
-  <!-- Using grid layout for book recommendations to enhance visual appeal -->
+  <!-- Main Content -->
   <main>
-    <h1>Where to Start?</h1>
-    <div class="content-container grid-books">
-      <p>If you're new to the Cosmere, choosing a starting point can be overwhelming. Here are some recommended books
-        along with their covers to help you decide:</p>
+    <h1>Where to Start? <i class="fa-solid fa-book-open"></i></h1>
+    <p>If you're new to the Cosmere, choosing a starting point can be overwhelming. Here are some recommended books to help you decide:</p>
 
-      <section class="book">
-        <h2>Mistborn: The Final Empire</h2>
+    <section class="grid-container">
+      <div class="grid-item">
+        <h2>Mistborn: The Final Empire <i class="fa-solid fa-mask"></i></h2>
         <img src="images/mistborn.jpg" alt="Mistborn: The Final Empire book cover">
-        <p>A great entry point for readers who enjoy a mix of heist, rebellion, and a unique metal-based magic system.
-          This novel sets up many mysteries that tie into the broader Cosmere.</p>
-      </section>
+        <p>A great entry point for readers who enjoy a mix of heist, rebellion, and a unique metal-based magic system. This novel sets up many mysteries that tie into the broader Cosmere.</p>
+      </div>
 
-      <section class="book">
-        <h2>Elantris</h2>
+      <div class="grid-item">
+        <h2>Elantris <i class="fa-solid fa-landmark"></i></h2>
         <img src="images/elantris.jpg" alt="Elantris book cover">
-        <p>A standalone novel that introduces a fascinating magic system and a once-great city brought low by tragedy.
-          Perfect if you prefer a self-contained story.</p>
-      </section>
+        <p>A standalone novel that introduces a fascinating magic system and a once-great city brought low by tragedy. Perfect if you prefer a self-contained story.</p>
+      </div>
 
-      <section class="book">
-        <h2>The Way of Kings</h2>
+      <div class="grid-item">
+        <h2>The Way of Kings <i class="fa-solid fa-crown"></i></h2>
         <img src="images/way-of-kings.jpeg" alt="The Way of Kings book cover">
-        <p>The first book in The Stormlight Archive series, offering an epic narrative with deep characters and
-          expansive worldbuilding for those ready for a longer, immersive journey.</p>
-      </section>
+        <p>The first book in The Stormlight Archive series, offering an epic narrative with deep characters and expansive worldbuilding for those ready for a longer, immersive journey.</p>
+      </div>
+    </section>
 
-      <!-- Cosmere Reading Order Picture Section Kept large for readability-->
-      <section class="reading-order">
-        <h2>The reading order as recommended by Brandon</h2>
-        <img src="images/cosmere-reading-order.jpeg" alt="Cosmere Reading Order">
-      </section>
-
-    </div>
+    <section class="reading-order">
+      <h2>Recommended Reading Order <i class="fa-solid fa-list-ol"></i></h2>
+      <img src="images/cosmere-reading-order.jpeg" alt="Cosmere Reading Order">
+    </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; Seth's Classroom website 2025.</p>
+    <p>&copy; Seth's Classroom Website 2025.</p>
+    <p>Join the conversation with fellow fans:</p>
+    <p>
+      <a href="https://www.reddit.com/r/Cosmere/" target="_blank" rel="noopener noreferrer">r/Cosmere on Reddit</a> |
+      <a href="https://www.17thshard.com/forums/" target="_blank" rel="noopener noreferrer">17th Shard Forums</a>
+    </p>
   </footer>
-</body>
 
+</body>
 </html>
