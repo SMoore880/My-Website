@@ -1,3 +1,16 @@
+/* Universal reset for box-sizing and prevent horizontal overflow */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* =====================================================
    General Styles
    - Defines the global layout and visual design for the entire webpage
@@ -315,10 +328,14 @@ h6 {
   width: 100%;
   margin-top: 2rem;
   text-align: center;
+  overflow-x: auto;
+  /* Allows horizontal scrolling within the container */
 }
 
 .shards-table table {
   width: 100%;
+  max-width: 100%;
+  /* Prevents table from exceeding its container */
   border-collapse: collapse;
   margin-top: 1rem;
   background-color: #F5F5F5;
@@ -412,17 +429,12 @@ h6 {
     text-align: center;
     padding: 0;
     width: 100%;
-    /* Ensure the ul spans full width */
+    /* Ensure the nav list spans the full width */
   }
 
   nav ul li {
     width: 100%;
-    padding: 0.5rem 1rem;
-    margin: 0.25rem 0;
-    border: 1px solid #ffffff;
-    /* Optional: adds a white border around each nav item */
-    border-radius: 3px;
-    /* Optional: rounds the corners */
+    padding: 0.5rem 0;
   }
 }
 
@@ -458,7 +470,7 @@ h6 {
     grid-template-columns: 1fr;
     /* Force single-column layout */
     gap: 0.5rem;
-    /* Optional: reduce gap on very small screens */
+    /* Optionally reduce gap on very small screens */
   }
 }
 
