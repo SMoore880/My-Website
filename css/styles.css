@@ -22,8 +22,6 @@ body {
   /* Stacks content vertically */
   min-height: 100vh;
   /* Ensures the page covers the full viewport height */
-  overflow-x: hidden;
-  /* Prevents horizontal scrolling on mobile devices */
 }
 
 /* =====================================================
@@ -40,6 +38,8 @@ nav {
   /* Enables horizontal layout via flexbox */
   justify-content: center;
   /* Centers menu items horizontally */
+  width: 100%;
+  /* Ensures the nav spans the full width of the viewport */
 }
 
 nav ul {
