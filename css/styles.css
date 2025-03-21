@@ -196,6 +196,17 @@ h6 {
 }
 
 /* =====================================================
+   Icon Styles
+   - Ensures that all icons (e.g., in the beginner page) are large and consistent
+===================================================== */
+.custom-icon {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  /* Ensures the icon scales properly */
+}
+
+/* =====================================================
    Grid Layout and Items
    - Implements a responsive grid layout for various sections
 ===================================================== */
@@ -281,10 +292,13 @@ h6 {
   text-align: center;
 }
 
+/* Updated book image styling for uniform large images */
 .book img {
-  max-width: 350px;
   width: 100%;
-  height: auto;
+  height: 200px;
+  /* Set a fixed height for consistency */
+  object-fit: cover;
+  /* Ensures the image covers the area nicely */
   display: block;
   margin: 0.5rem auto;
   border-radius: 0.5rem;
