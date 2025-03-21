@@ -411,11 +411,18 @@ h6 {
     flex-direction: column;
     text-align: center;
     padding: 0;
+    width: 100%;
+    /* Ensure the ul spans full width */
   }
 
   nav ul li {
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    border: 1px solid #ffffff;
+    /* Optional: adds a white border around each nav item */
+    border-radius: 3px;
+    /* Optional: rounds the corners */
   }
 }
 
@@ -442,6 +449,16 @@ h6 {
 @media (min-width: 1024px) {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Additional Mobile: For screens up to 600px */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    /* Force single-column layout */
+    gap: 0.5rem;
+    /* Optional: reduce gap on very small screens */
   }
 }
 
